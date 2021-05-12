@@ -2,7 +2,7 @@
 
 import random
 
-print("Welcome to the Game of Thrones name generator.'\n")
+print("Welcome to the Game of Thrones name generator.")
 
 first = ('Addam', 'Aegon', 'Aemon', 'Alan', 'Allyria',
          'Arthur', 'Baelor', 'Bedwyck', 'Boremund', 'Bryan',
@@ -18,12 +18,11 @@ while True:
     firstName = random.choice(first)
     lastName = random.choice(last)
 
-    print("\n\n")
+    print("\n")
     print("{} {}".format(firstName,lastName))
-    print("\n\n")
+    print("\n")
 
-    try_again = input("\n\nTry again? (Press enter, or press n to quit)\n")
-    if try_again.lower() == "n":
+    try_again = input("Try again? (Press enter, or type 'exit' to quit)\n")
+    if try_again.lower() == "exit":
+        print("goodbye")
         break
-
-input("\nPress enter to exit.\n")

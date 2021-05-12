@@ -13,22 +13,21 @@ alphabet = ["a","b","c","d","e","f","g",
 
 while True:
     text = input('\nPlease enter the sentence you would like to analyze,\
-or type "quit" to exit.')
+ or type "quit" to exit.\n')
 
     if text == 'quit':
+        print("goodbye")
         break
 
     print("\nText = " + '"' + text + '"\n')
 
-    d = {}
+    chart = {}
 
     for key, letter in enumerate(alphabet):
-        d[letter] = []
+        chart[letter] = []
         if letter in text.lower():
             for y, value in enumerate(text):
                 if value.lower() == letter:
-                    d[letter].append(value)
+                    chart[letter].append(value)
 
-    pp.pprint(d)
-
-input('\nPress ENTER to quit.')
+    pp.pprint(chart)
